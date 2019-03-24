@@ -39,7 +39,7 @@ public class ListController {
 
         if (column.equals("all")) {
             ArrayList<HashMap<String, String>> jobs = JobData.findAll();
-            model.addAttribute("title", "All Jobs");
+            model.addAttribute("title", "All Jobs: " + jobs.size());
             model.addAttribute("jobs", jobs);
             return "list-jobs";
         } else {
